@@ -3,9 +3,17 @@
  */
 
 locals {
-  appname     = "${lower(var.name)}"
-  name        = "${format("%s-%s", local.appname, local.environment)}"
-  environment = "${lower(terraform.workspace)}"
-  tags        = "${merge(map("terraform", "true", "environment", local.environment,
-                "appname", local.appname, "Name", local.name), var.tags)}"
+  appname     = lower(var.name)
+  name        = format("%s-%s", local.appname, local.environment)
+  environment = lower(terraform.workspace)
+  tags = merge(
+    {
+      "terraform"   = "true"
+      "environment" = local.environment
+      "appname"     = local.appname
+      "Name"        = local.name
+    },
+    var.tags,
+  )
 }
+
