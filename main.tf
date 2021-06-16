@@ -1,6 +1,5 @@
-/**
- * This module provides consistent naming for Terraform resources. It should be used for all our Terraform configs. The `tags` output should be used for any AWS resources that support tags.
- */
+## This module provides consistent naming for Terraform resources. It should be used for all our 
+## Terraform configs. The `tags` output should be used for any AWS resources that support tags.
 
 locals {
   appname     = lower(var.name)
