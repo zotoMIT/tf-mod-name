@@ -9,7 +9,7 @@ variable "tags" {
   default     = {}
 }
 
-variable "TFC_WORKSPACE_NAME" {
+variable "ws" {
   type = string
   default = ""
 }
