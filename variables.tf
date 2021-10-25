@@ -11,4 +11,5 @@ variable "tags" {
 
 variable "TFC_WORKSPACE_NAME" {
   type = string
+  default = ""
 }
