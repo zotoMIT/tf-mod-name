@@ -8,3 +8,7 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "TFC_WORKSPACE_NAME" {
+  type = string
+}
