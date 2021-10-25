@@ -4,7 +4,7 @@
 locals {
   appname     = lower(var.name)
   name        = format("%s-%s", local.appname, local.environment)
-  environment = lower(terraform.workspace)
+  environment = lower(terraform.tfc_workspace_name)
   tags = merge(
     {
       "terraform"   = "true"
