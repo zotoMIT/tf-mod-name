@@ -10,6 +10,7 @@ variable "tags" {
 }
 
 variable "ws" {
-  type = string
+  description = "Workspace variable, used in place of terraform.workspace"
+  type    = string
   default = ""
 }

@@ -1,6 +1,12 @@
-# Module purpose
+# Mod-label
+This is a modified version of mitlibraries tf-mod-name that takes one additional input, "WS" short for workspace.  
 
-This module provides consistent naming for Terraform resources. It should be used for all our Terraform configs. The `tags` output should be used for any AWS resources that support tags.
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | ~> 1.0 |
+
 
 ## Inputs
 
@@ -8,6 +14,7 @@ This module provides consistent naming for Terraform resources. It should be use
 |------|-------------|------|---------|:--------:|
 | name | App name | `string` | n/a | yes |
 | tags | Map of additional tags for the resource | `map(string)` | `{}` | no |
+| ws | Workspace variable, used in place of terraform.workspace | `string` | `""` | no |
 
 ## Outputs
 
